@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/당근.css">
+    <script src="js/당근.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div class="header_wrap">
+            <div class="header_content">
+                <img src="images/dangun.png" width="60" height="auto" class="dang">
+            </div>
+            <div class="header_content">
+                <button class="header_menu_selected">중고거래</button>
+            </div>
+            <div class="header_content">
+                <button class="header_menu">동네가게</button>
+            </div>
+            <div class="header_content">
+                <button class="header_menu">알바</button>
+            </div>
+            <div class="header_content">
+                <button class="header_menu">부동산 직거래</button>
+            </div>
+            <div class="header_content">
+                <button class="header_menu">중고차 직거래</button>
+            </div>
+            <div class="header_content">
+                <form onsubmit="submitForm(event)">
+                    <input class="search_input" type="text" placeholder="물품이나 동네를 검색해보세요">
+                    <button type="submit" class="chat_button">채팅하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="main">
+            <div class="main_left"></div>
+            <div class="main_mid">
+                <div class="bong">
+                    <img src="images/gps.png" alt="">
+                    <h1>봉곡동에서 알바 찾고 계신가요?</h1>
+                </div>
+                
+                <!-- 봉곡동 아이콘과 검색창을 한 줄에 배치 -->
+                <div class="bonggok-and-search">
+                    <!-- 봉곡동 아이콘과 위치 선택 -->
+                    <div class="bonggok" onclick="toggleDropdown()">
+                        <img id="location-icon" src="images/gps3.png" alt="위치 아이콘">
+                        <span id="selected-location">봉곡동 ▼</span>
+
+                        <!-- 드롭다운 메뉴 -->
+                        <div class="dropdown" id="dropdown">
+                            <div onclick="selectLocation('봉곡동')">봉곡동</div>
+                            <div onclick="selectLocation('도량동')">도량동</div>
+                            <div onclick="selectLocation('지산동')">지산동</div>
+                            <div onclick="selectLocation('선주동')">선주동</div>
+                            <div onclick="selectLocation('고아동')">고아동</div>
+                            <div onclick="selectLocation('달서동')">달서동</div>
+                            <div onclick="selectLocation('중동')">중동</div>
+                            <div onclick="selectLocation('선산동')">선산동</div>
+                        </div>
+                    </div>
+
+                    <!-- 검색창 -->
+                    <div class="search">
+                        <input class="search_input" type="text" placeholder="중고거래 │ 검색어를 입력해주세요">
+                    </div>
+                </div>
+
+                <!-- 인기검색어 -->
+                <div class="popular">
+                    <p>인기검색어 굿즈 알바 카페 노트북 원룸 현대 중고차 이사짐 알바 근처 맛집 동네친구 운동모임</p>
+                </div>
+                <div class="category-container">
+                    <div class="category-item">
+                        <img src="images/중고거래.png" alt="중고거래">
+                        <p>중고거래</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/알바.png" alt="알바">
+                        <p>알바</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/부동산.png" alt="부동산">
+                        <p>부동산</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/중고차.png" alt="중고차">
+                        <p>중고차</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/동네업체.png" alt="동네업체">
+                        <p>동네업체</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/동네생활.png" alt="동네생활">
+                        <p>동네생활</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/모임.png" alt="모임">
+                        <p>모임</p>
+                    </div>
+                </div>
+                <div class="dongnae">
+                    <span>봉곡동</span>
+                    <span>도량동</span>
+                    <span>지산동</span>
+                    <span>선주동</span>
+                    <span>고아동</span>
+                    <span>달서동</span>
+                    <span>선상동</span>
+                    <span>중동</span>
+                    <span>송정동</span>
+                    <span>성민동</span>
+                    <span>메지동</span>
+                </div>
+                <div class="dongnae2">
+                    <span>사시읍</span>
+                    <span>고려읍</span>
+                    <span>신라동</span>
+                    <span>상함읍</span>
+                    <span>낭양읍</span>
+                    <span>진성읍</span>
+                </div>
+                <div class="junggo">
+                    <h1>중고거래 인기매물</h1>
+                </div>
+            </div>
+            <div class="main_right"></div>
+        </div>
+    </main>
+</body>
+</html>
